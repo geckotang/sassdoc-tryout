@@ -12,6 +12,17 @@
   // ...
 }
 
+// @mixin blockquote
+// @param $color {Color} ...
+// @usage:
+// .blockquote{
+//  =blockquote(#ccc);
+// }
+@mixin blockquote($color) {
+  // ...
+}
+
+
 // this is an example function
 // @function  example-function
 // @param     $type {String} the type of example [easy|hard]
