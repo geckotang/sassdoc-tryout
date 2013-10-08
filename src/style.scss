@@ -1,61 +1,6 @@
-// アットマークが大文字なのが残念...
 //
-// @mixin     example-mixin
-// @param     $first  {String} the first parameter is a string
-// @param     $second {Number} the second parameter is a number
-// @param     $third  {List}   this one is a list!
-// @link      http://example.com/
-// @see       function-two
-// @usage:
-// ＠include example-mixin(first, 2, (3))
-@mixin example-mixin($first, $second, $third) {
-  // ...
-}
-
-// @mixin blockquote
-// @param $color {Color} ...
-// @usage:
-// .blockquote{
-//  =blockquote(#ccc);
-// }
-@mixin blockquote($color) {
-  // ...
-}
-
-
-// this is an example function
-// @function  example-function
-// @param     $type {String} the type of example [easy|hard]
-// @return    {Number} the index of the type
-@function example-function($type) {
-  @return index(easy hard, $type);
-}
-
-// this is a private function
-// @function  -private-function
-// @private
-// @param     $color {Color} a color!
-// @return    {Boolean} true of it succeed, false if it failed
-@function -private-function($type) {
-  //
-}
-
-
-
-// @category  utilities
-
-// first function
-// @function  function-one
-// @param     $first {Color} a color
-// @return    {Boolean} true of it succeed, false if it failed
-@function function-one($first) {
-  //
-}
-
-// second function
-// @function  function-two
-// @param     $first {Color} a color
-// @return    {Boolean} true of it succeed, false if it failed
-@function function-two($first) {
-  //
-}
+// # サイトで読み込むCSS
+//
+// このSCSSではimportのみ行う
+//
+@import 'mixin';

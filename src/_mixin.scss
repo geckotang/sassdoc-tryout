@@ -1,0 +1,32 @@
+// @category  Utilities
+
+// pointer-eventsにprefixをつける
+//
+// @mixin pointer-events
+// @param $value {String} 有効にするか無効にするか [none|auto]
+// @usage:
+// .link.disabled{
+//  =pointer-events(none);
+// }
+@mixin pointer-events($value:none) {
+  -webkit-pointer-events: $value;
+  pointer-events: $value;
+}
+
+// @category  Number
+
+// 渡された数値をemに変換します
+//
+// @function em
+// @param $number {Number} 単位なしの数値
+// @return {Number} 単位を付与した数値
+// @link https://github.com/hail2u/scss-functions/blob/master/number/_em.scss
+// @usage:
+// .header-text{
+//  font-size: em(12);
+// }
+
+@function em($number) {
+  $number: ($number * 1em);
+  @return $number;
+}
