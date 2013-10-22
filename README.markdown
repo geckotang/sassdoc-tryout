@@ -40,22 +40,35 @@ bundle exec sassdoc src -d docs -n '俺の考えた最強のドキュメント'
 
 ``@usage``を使って使用方法を明示したいが、sass記法で想定されているので、scss記法の``@include``だとうまくパースされない。
 
-なので大文字の＠を使う…
+なので大文字の＠を使うかsass記法で書く。
 
 ``` scss
 // @usage:
-// =example-mixin(first, 2, (3))
-```
-↓sass記法は使っていないので…scss記法に…
-
-``` scss
-// @usage:
-// @include example-mixin(first, 2, (3))
+// .link.disabled{
+//  @include pointer-events(none);
+// }
 ```
 ↓うまくいかないので大文字に…（当たり前か…
 
 ``` scss
 // @usage:
-// ＠include example-mixin(first, 2, (3))
+// .link.disabled{
+//  ＠pointer-events(none);
+// }
+```
+
+さすがに大文字だと気持ち悪いので…sass記法で書くとドキュメントには@includeで表示される。
+
+``` scss
+// @usage:
+// .link.disabled{
+//  =pointer-events(none);
+// }
+```
+
+``` css
+.link.disabled{
+@include pointer-events(none);
+}
 ```
 
